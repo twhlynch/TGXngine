@@ -1,0 +1,203 @@
+#include "Projectile.h"
+#include "Globals.h"
+#include "Lookup.h"
+#include "Orders.h"
+#include "ProjectileStates.h"
+#include "Window.h"
+#include "module_interface.h"
+
+namespace WoS
+{
+extern "C"
+{
+	MODULE_API void Init()
+	{
+		Log::Success("Projectile Init: registering bullet projectile type");
+	}
+
+	MODULE_API ProjectileInstance *Awake(const String &name)
+	{
+		Log::Success("Awake Projectile: " + name);
+
+		WorldState &world = WorldState::GetInstance();
+
+		if (!world.projectiles.contains(name))
+		{
+			world.projectiles[name] = Vector<Unique<ProjectileInstance>>();
+		}
+
+		if (name == "bullet")
+		{
+			return globalProjectile = new BulletInstance();
+		}
+		if (name == "grenade")
+		{
+			return globalProjectile = new GrenadeInstance();
+		}
+		if (name == "rocket")
+		{
+			return globalProjectile = new RocketInstance();
+		}
+		if (name == "shell")
+		{
+			return globalProjectile = new ShellInstance();
+		}
+
+		return nullptr;
+	}
+
+	MODULE_API void Create(
+		Vector<sf::Sprite *> *spritesRef,
+		Vector<sf::Texture *> *texturesRef,
+		const String & /*name*/)
+	{
+		Log::Crash("Creating projectile textures and sprites for: " + globalProjectile->GetName());
+
+		String projectile = "/bullets/" + globalProjectile->GetName();
+
+		for (int i = 0; i < globalProjectile->GetFrames(); i++)
+		{
+			sf::Image image;
+			if (!(image.loadFromFile("Resources/images/" + projectile + "/" + std::to_string(i) + ".png")))
+			{
+				Log::Error("Cannot load image: Resources/images/" + projectile + "/" + std::to_string(i) + ".png");
+				continue;
+			}
+
+			auto *texture = new sf::Texture();
+			auto *sprite = new sf::Sprite();
+
+			texture->loadFromImage(image);
+			sprite->setTexture(*texture);
+
+			texturesRef->emplace_back(texture);
+			spritesRef->emplace_back(sprite);
+		}
+
+		Log::Success("Projectile asset creation complete for: " + globalProjectile->GetName());
+	}
+
+	MODULE_API void Update(AssetState * /*assetState*/, Vector<sf::Sprite *> * /*spritesRef*/)
+	{
+		WorldState &world = WorldState::GetInstance();
+
+		for (auto &[weaponName, projectileList] : world.projectiles)
+		{
+			for (int i = static_cast<int>(projectileList.size()) - 1; i >= 0; --i)
+			{
+				ProjectileInstance *projectile = projectileList[i].get();
+				if (!projectile)
+				{
+					projectileList.erase(projectileList.begin() + i);
+					continue;
+				}
+
+				float dx = projectile->targetX - projectile->x;
+				float dy = projectile->targetY - projectile->y;
+				float distSq = (dx * dx) + (dy * dy);
+
+				if (distSq < 0.1)
+				{
+					int targetIndex = LookUp::Get(projectile->targetUid);
+					int shooterIndex = LookUp::Get(projectile->uid);
+
+					if (targetIndex >= 0 && targetIndex < static_cast<int>(world.items.size()))
+					{
+						ItemInstance *target = world.items[targetIndex].get();
+
+						if (target)
+						{
+							if (shooterIndex >= 0 && shooterIndex < static_cast<int>(world.items.size()))
+							{
+								int shooterUid = world.items[shooterIndex]->GetUid();
+								auto targetState = target->GetState();
+
+								if (targetState != ItemStates::Firing && targetState != ItemStates::Retreating)
+								{
+									if (target->GetOrders())
+									{
+										target->GetOrders()->order = Orders::Order::Attacked;
+										target->GetOrders()->target_uid = shooterUid;
+									}
+								}
+							}
+
+							target->Damage(projectile->GetDamage());
+							if (target->GetLife() <= 0)
+							{
+								target->SetOrders(Orders::Order::Destroyed);
+							}
+						}
+					}
+
+					projectileList.erase(projectileList.begin() + i);
+					continue;
+				}
+
+				float dist = std::sqrt(distSq);
+
+				if (dist > 0.0f && static_cast<float>(projectile->GetSpeed()) > 0.0f)
+				{
+					float movement = static_cast<float>(projectile->GetSpeed()) * (1.0f / 96.0f) * world.GetDeltaTime();
+					projectile->x += (dx / dist) * movement;
+					projectile->y += (dy / dist) * movement;
+				}
+				else
+				{
+					projectile->x = projectile->targetX;
+					projectile->y = projectile->targetY;
+				}
+			}
+		}
+	}
+
+	MODULE_API void Draw(Vector<sf::Sprite *> *inSritesRef, const String &projectileName)
+	{
+		WorldState &world = WorldState::GetInstance();
+
+		if (!world.projectiles.contains(projectileName))
+		{
+			return;
+		}
+
+		auto &projectileList = world.projectiles.at(projectileName);
+		if (projectileList.empty())
+		{
+			return;
+		}
+
+		auto it = world.projectileRegistry.find(projectileName);
+		if (it == world.projectileRegistry.end())
+		{
+			return;
+		}
+
+		int spriteIndex = it->second->spriteIndex;
+
+		if (spriteIndex < 0 || spriteIndex >= static_cast<int>(inSritesRef->size()))
+		{
+			return;
+		}
+
+		sf::Sprite *sprite = (*inSritesRef)[spriteIndex];
+
+		Window &window = Window::GetInstance();
+
+		for (auto &projectile : projectileList)
+		{
+			sprite->setPosition(sf::Vector2f(
+				((projectile->x * Globals::grid_size) + static_cast<float>(world.GetMapXOffset())),
+				((projectile->y * Globals::grid_size) + static_cast<float>(world.GetMapYOffset()))));
+
+			window.Draw(*sprite);
+		}
+	}
+
+	MODULE_API void Clear()
+	{
+		WorldState &world = WorldState::GetInstance();
+		world.projectiles.clear();
+		Log::Info("Cleared projectile states");
+	}
+}
+} // namespace WoS

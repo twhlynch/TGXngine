@@ -1,0 +1,22 @@
+name: Clang Format Check
+
+on:
+  pull_request:
+
+jobs:
+  clang-format:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install clang-format
+        run: |
+          sudo apt install -y python3 python3-pip
+          python3 -m pip install clang-format
+          clang-format --version
+
+      - name: Run clang-format check
+        run: |
+          ./Tools/CI/check-formatting.sh

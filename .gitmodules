@@ -1,0 +1,21 @@
+[submodule "Vendor/SFML"]
+	path = Vendor/SFML
+	url = https://github.com/SFML/SFML.git
+[submodule "Vendor/IXWebSocket"]
+	path = Vendor/IXWebSocket
+	url = https://github.com/machinezone/IXWebSocket.git
+[submodule "Vendor/json"]
+	path = Vendor/json
+	url = https://github.com/nlohmann/json.git
+[submodule "Vendor/random"]
+	path = Vendor/random
+	url = https://github.com/effolkronium/random.git
+[submodule "Vendor/zlib"]
+	path = Vendor/zlib
+	url = https://github.com/madler/zlib.git
+[submodule "Vendor/unordered_dense"]
+	path = Vendor/unordered_dense
+	url = https://github.com/martinus/unordered_dense.git
+[submodule "Vendor/fmt"]
+	path = Vendor/fmt
+	url = https://github.com/fmtlib/fmt.git

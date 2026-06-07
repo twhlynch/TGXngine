@@ -1,0 +1,107 @@
+name: Build and Deploy
+
+on:
+  workflow_dispatch:
+  pull_request:
+
+jobs:
+  # do once at the start to reduce chance of network issues
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository and submodules
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+          lfs: true
+          fetch-depth: 0
+
+      - name: Upload source artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: source-code
+          path: .
+          retention-days: 1
+
+  build:
+    needs: fetch
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+      # max-parallel: 1 # helps with network limits
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Download source artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: source-code
+          path: ./source
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.12
+
+      - name: Install dependencies (Linux)
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt update
+          sudo apt install -y zlib1g-dev libx11-dev libxrandr-dev libxinerama-dev libxcursor-dev libxi-dev libgl1-mesa-dev libudev-dev libopenal-dev libogg-dev libvorbis-dev libflac-dev libfreetype6-dev
+
+      - name: Install dependencies (Windows)
+        if: runner.os == 'Windows'
+        shell: powershell
+        run: |
+          vcpkg install zlib openal-soft
+
+      - name: Install dependencies (macOS)
+        if: runner.os == 'macOS'
+        run: |
+          brew update
+          brew install cmake zlib
+
+      - name: Set VCPKG_ROOT (Windows)
+        if: runner.os == 'Windows'
+        shell: powershell
+        run: |
+          echo "VCPKG_ROOT=C:\vcpkg" >> $env:GITHUB_ENV
+
+      - name: Build
+        working-directory: ./source
+        run: |
+          python build.py --generate --build --release --optimise --publish ${{ runner.os == 'Linux' && '--docs' || '' }}
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: TGXngine-${{ runner.os }}
+          path: ./source/TGXngine
+          retention-days: 1
+
+      - name: Upload html artifact
+        if: runner.os == 'Linux'
+        uses: actions/upload-artifact@v4
+        with:
+          name: documentation
+          path: ./source/build/default/html
+          retention-days: 1
+
+      # TODO: uncomment when public
+      #
+      # - name: Setup Pages
+      #   if: runner.os == 'Linux'
+      #   uses: actions/configure-pages@v5
+      #
+      # - name: Upload pages artifact
+      #   if: runner.os == 'Linux'
+      #   uses: actions/upload-pages-artifact@v3
+      #   with:
+      #     path: ./source/build/default/html
+      #
+      # - name: Deploy to GitHub Pages
+      #   if: runner.os == 'Linux'
+      #   id: deployment
+      #   uses: actions/deploy-pages@v4

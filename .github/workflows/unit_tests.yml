@@ -1,0 +1,28 @@
+name: Run Unit Tests
+
+on:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.12
+
+      - name: Install dependencies
+        run: |
+          sudo apt update
+          sudo apt install -y zlib1g-dev libx11-dev libxrandr-dev libxinerama-dev libxcursor-dev libxi-dev libgl1-mesa-dev libudev-dev libopenal-dev libogg-dev libvorbis-dev libflac-dev libfreetype6-dev
+
+      - name: Run Tests
+        run: |
+          python build.py --test --release

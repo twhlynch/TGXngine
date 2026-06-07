@@ -1,0 +1,4 @@
+InheritParentConfig: true
+Checks: >
+    -misc-definitions-in-headers,
+    -misc-use-internal-linkage

@@ -1,0 +1,336 @@
+{
+	"singleplayer":
+	[
+		{
+			"name":"level-one",
+			"briefing": "In this level you will start commanding units and moving them around the map.",
+			"mapImage":"Resources/images/maps/singleplayer/level-one/",
+			"numberOfHorizontalTiles":7,
+			"numberOfVerticalTiles":5,
+			"backgroundOffsetX":0,
+			"backgroundOffsetY":80,
+			"backgroundOffsetWidth":160,
+			"backgroundOffsetHeight":0,
+			"positions":[
+				{"x":0,"y":0}
+			],
+			"mapGridWidth":200,
+			"mapGridHeight":160,
+			"teams": [
+                {"name":"technology","type":"player"},
+                {"name":"social-earth","type":"ai"}
+            ],
+			"cash":
+			{
+				"technology":5000,
+				"social-earth":0 
+			},
+			"water":
+			{
+				"technology":0,
+				"social-earth":0
+			},
+			"oil":
+			{
+				"technology":0,
+				"social-earth":0
+			},
+			"additional_requirements":
+			[
+				{"type":"buildings","name":"construction_facility","team":"technology"},
+				{"type":"buildings","name":"powerplant","team":"technology"},
+				{"type":"buildings","name":"barracks","team":"technology"},
+				{"type":"buildings","name":"factory","team":"technology"},
+				{"type":"buildings","name":"radar","team":"technology"},
+				{"type":"buildings","name":"water_extractor","team":"technology"},
+				{"type":"buildings","name":"oil_extractor","team":"technology"},
+				{"type":"infantry","name":"soldier","team":"technology"},
+				{"type":"infantry","name":"rocketeer","team":"technology"},
+				{"type":"infantry","name":"grenadier","team":"technology"},
+				{"type":"infantry","name":"engineer","team":"technology"}				
+			],
+			"projectiles":
+			[
+				{"type":"projectiles","name":"bullet"},
+				{"type":"projectiles","name":"grenade"},
+				{"type":"projectiles","name":"rocket"},
+				{"type":"projectiles","name":"shell"}
+			],
+			"interface":
+			[
+				{"type":"interface","name":"sidebar"}
+			],
+			"triggers":
+			[
+				{"type":"triggers","name":"log"},			
+				{"type":"triggers","name":"log"},
+				{"type":"triggers","name":"log"}
+			],
+			"economy":
+			{
+				"technology":
+				{
+                    "cash":25000
+                },
+                "social-earth":
+                {
+                    "cash":0
+                }
+			},			
+			"fog_of_war":
+			[	
+				{"type":"fog_of_war"},			
+				{"layer":[
+					{"FOG_X":0,"color":"none"},
+					{"FOG_O":1,"color":"0xFFFFFFFF"},
+					[2,3,4,5,6,7,8,9]]
+				},
+				{"layer":[
+					{"FOG_X":0,"color":"none"},
+					{"FOG_O":1,"color":"0xFFFFFF33"},
+					[10,11,12,13,14,15,16,17]]
+				}
+			],
+			"ai":
+			[
+				
+			],
+			"items":
+			[
+				{"type":"buildings","name":"construction_facility","x":30,"y":40,"direction":0,"team":"technology","uid":-100},
+				{"type":"buildings","name":"powerplant","x":44,"y":4,"direction":0,"team":"technology","uid":-101},
+				{"type":"buildings","name":"science_post","x":60,"y":14,"direction":0,"team":"technology","uid":-120},
+				{"type":"infantry","name":"soldier","x":3,"y":4,"direction":0,"team":"social-earth","uid":-148},
+				{"type":"infantry","name":"soldier","x":5,"y":29,"direction":0,"team":"technology","uid":-145},
+				{"type":"infantry","name":"soldier","x":13,"y":20,"direction":0,"team":"social-earth","uid":-146},
+				{"type":"infantry","name":"soldier","x":5,"y":10,"direction":0,"team":"social-earth","uid":-149},
+				{"type":"infantry","name":"soldier","x":39,"y":19,"direction":0,"team":"technology","uid":-147},
+				{"type":"infantry","name":"soldier","x":9,"y":9,"direction":0,"team":"technology","uid":-150},
+				{"type":"infantry","name":"soldier","x":11,"y":9,"direction":0,"team":"technology","uid":-151},
+				{"type":"vehicles","name":"truck","x":10,"y":5,"direction":0,"team":"technology","uid":-152},
+				{"type":"vehicles","name":"truck","x":13,"y":5,"direction":0,"team":"technology","uid":-153},
+				{"type":"vehicles","name":"tank","x":15,"y":5,"direction":0,"team":"technology","uid":-157},
+				{"type":"vehicles","name":"rocket_truck","x":18,"y":5,"direction":0,"team":"technology","uid":-158},
+				{"type":"vehicles","name":"apc","x":20,"y":5,"direction":0,"team":"technology","uid":-159},
+				{"type":"vehicles","name":"prospector","x":26,"y":5,"direction":0,"team":"technology","uid":-160},
+				{"type":"ships","name":"battleship","x":5,"y":118,"direction":2,"team":"technology","uid":-154},
+				{"type":"infantry","name":"grenadier","x":9,"y":18,"direction":0,"team":"technology","uid":-155},
+				{"type":"infantry","name":"rocketeer","x":10,"y":10,"direction":0,"team":"technology","uid":-156},
+				{"type":"infantry","name":"soldier","x":26,"y":24,"direction":0,"team":"technology","uid":-200},
+				{"type":"infantry","name":"soldier","x":27,"y":24,"direction":0,"team":"technology","uid":-201},
+				{"type":"infantry","name":"soldier","x":28,"y":24,"direction":0,"team":"technology","uid":-202},
+				{"type":"infantry","name":"soldier","x":29,"y":24,"direction":0,"team":"technology","uid":-203},
+				{"type":"infantry","name":"soldier","x":30,"y":24,"direction":0,"team":"technology","uid":-204},
+				{"type":"infantry","name":"soldier","x":31,"y":24,"direction":0,"team":"technology","uid":-205},
+				{"type":"infantry","name":"soldier","x":26,"y":25,"direction":0,"team":"technology","uid":-206},
+				{"type":"infantry","name":"soldier","x":27,"y":25,"direction":0,"team":"technology","uid":-207},
+				{"type":"infantry","name":"soldier","x":28,"y":25,"direction":0,"team":"technology","uid":-208},
+				{"type":"infantry","name":"soldier","x":29,"y":25,"direction":0,"team":"technology","uid":-209},
+				{"type":"infantry","name":"soldier","x":30,"y":25,"direction":0,"team":"technology","uid":-210},
+				{"type":"infantry","name":"soldier","x":31,"y":25,"direction":0,"team":"technology","uid":-211},
+				{"type":"infantry","name":"soldier","x":26,"y":26,"direction":0,"team":"technology","uid":-212},
+				{"type":"infantry","name":"soldier","x":27,"y":26,"direction":0,"team":"technology","uid":-213},
+				{"type":"infantry","name":"soldier","x":28,"y":26,"direction":0,"team":"technology","uid":-214},
+				{"type":"infantry","name":"soldier","x":29,"y":26,"direction":0,"team":"technology","uid":-215},
+				{"type":"infantry","name":"soldier","x":30,"y":26,"direction":0,"team":"technology","uid":-216},
+				{"type":"infantry","name":"soldier","x":31,"y":26,"direction":0,"team":"technology","uid":-217}
+			],
+			"resources":
+			[
+				{"type":"resources","name":"water","x":26,"y":13,"uid":-1000},
+                {"type":"resources","name":"oil","x":116,"y":72,"uid":-1001}
+			]
+		},
+		{
+			"name":"ai-level",
+			"briefing": "In this level you will start commanding ship units and moving them around the map.",
+			"mapImage":"Resources/images/maps/singleplayer/ai-level/",
+			"numberOfHorizontalTiles":10,
+			"numberOfVerticalTiles":6,
+			"backgroundOffsetX":0,
+			"backgroundOffsetY":80,
+			"backgroundOffsetWidth":160,
+			"backgroundOffsetHeight":0,
+			"positions":[
+				{"x":0,"y":0}
+			],
+			"mapGridWidth":240,
+			"mapGridHeight":240,
+			"teams": [
+                {"name":"technology","type":"player"},
+                {"name":"social-earth","type":"ai"}
+            ],
+			"cash":
+			{
+				"technology":5000,
+				"social-earth":0 
+			},
+			"water":
+			{
+				"technology":0,
+				"social-earth":0
+			},
+			"oil":
+			{
+				"technology":0,
+				"social-earth":0
+			},
+			"additional_requirements":
+			[
+				{"type":"buildings","name":"powerplant","team":"technology"},
+				{"type":"buildings","name":"barracks","team":"technology"},
+				{"type":"buildings","name":"factory","team":"technology"},
+				{"type":"buildings","name":"radar","team":"technology"},
+				{"type":"buildings","name":"extractor","team":"technology"},
+				{"type":"infantry","name":"soldier","team":"technology"},
+				{"type":"infantry","name":"rocketeer","team":"technology"},
+				{"type":"infantry","name":"grenadier","team":"technology"},
+				{"type":"infantry","name":"engineer","team":"technology"}
+			],
+			"projectiles":
+			[
+				{"type":"projectiles","name":"bullet"},
+				{"type":"projectiles","name":"grenade"},
+				{"type":"projectiles","name":"rocket"},
+				{"type":"projectiles","name":"shell"}
+			],
+			"interface":
+			[
+				{"type":"interface","name":"sidebar"}
+			],
+			"triggers":
+			[
+				{"type":"triggers","name":"log"}			
+			],
+			"economy":
+			{
+				"technology":
+				{
+                    "cash":25000
+                },
+                "social-earth":
+                {
+                    "cash":0
+                }
+			},			
+			"fog_of_war":
+			[	
+				{"type":"fog_of_war"},			
+				{"layer":[
+					{"FOG_X":0,"color":"none"},
+					{"FOG_O":1,"color":"0xFFFFFFFF"},
+					[2,3,4,5,6,7,8,9]]
+				},
+				{"layer":[
+					{"FOG_X":0,"color":"none"},
+					{"FOG_O":1,"color":"0xFFFFFF33"},
+					[10,11,12,13,14,15,16,17]]
+				}
+			],
+			"ai": [
+				{
+					"name":"builder",
+					"buildLimit": 6,
+					"techTree": {
+						"nodes": [
+							{
+								"name": "construction_facility",
+								"type": "buildings",
+								"role": "building_generator",
+								"buildTime": 1080,
+								"cost": 5000,
+								"powerUsage": 0,
+								"powerOutput": 0,
+								"isRoot": true,
+								"children": ["powerplant"]
+							},
+							{
+								"name": "powerplant",
+								"type": "buildings",
+								"role": "power_generator",
+								"buildTime": 240,
+								"cost": 100,
+								"powerUsage": 0,
+								"powerOutput": 400,
+								"isRoot": false,
+								"children": ["barracks", "vehicle_assembly_tunnel"]
+							},
+							{
+								"name": "barracks",
+								"type": "buildings",
+								"role": "light_land_generator",
+								"buildTime": 360,
+								"cost": 300,
+								"powerUsage": 150,
+								"powerOutput": 0,
+								"isRoot": false,
+								"children": ["soldier", "grenadier", "rocketeer"]
+							},
+							{
+								"name": "soldier",
+								"type": "infantry",
+								"role": "light_land_offensive",
+								"buildTime": 360,
+								"cost": 300,
+								"powerUsage": 0,
+								"powerOutput": 0,
+								"isRoot": false
+							},
+							{
+								"name": "grenadier",
+								"type": "infantry",
+								"role": "light_land_offensive",
+								"buildTime": 360,
+								"cost": 300,
+								"powerUsage": 0,
+								"powerOutput": 0,
+								"isRoot": false
+							},
+							{
+								"name": "rocketeer",
+								"type": "infantry",
+								"role": "light_land_offensive",
+								"buildTime": 360,
+								"cost": 300,
+								"powerUsage": 0,
+								"powerOutput": 0,
+								"isRoot": false
+							},
+							{
+								"name": "vehicle_assembly_tunnel",
+								"type": "buildings",
+								"role": "heavy_land_generator",
+								"buildTime": 720,
+								"cost": 2000,
+								"powerUsage": 250,
+								"powerOutput": 0,
+								"isRoot": false,
+								"children": ["prospector"]
+							},
+							{
+								"name": "prospector",
+								"type": "vehicles",
+								"role": "light_land_gatherer",
+								"buildTime": 480,
+								"cost": 500,
+								"powerUsage": 250,
+								"powerOutput": 0,
+								"isRoot": false
+							}
+						]
+					}
+				}
+			],
+			"items":
+			[
+				{"type":"infantry","name":"soldier","x":15,"y":15,"direction":0,"team":"technology","uid":-148},
+				{"type":"infantry","name":"soldier","x":13,"y":20,"direction":0,"team":"social-earth","uid":-146}
+			],
+			"resources":
+			[
+				{"type":"resources","name":"water","x":26,"y":13,"uid":-1000},
+                {"type":"resources","name":"oil","x":116,"y":72,"uid":-1001}
+			]
+		}
+	]	
+}

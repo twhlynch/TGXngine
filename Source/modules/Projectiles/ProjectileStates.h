@@ -1,0 +1,122 @@
+#pragma once
+
+#include "ProjectileInstance.h"
+
+namespace WoS
+{
+class BulletInstance : public ProjectileInstance
+{
+public:
+	static constexpr int frames = 11;
+	static constexpr int speed = 420;
+	static constexpr float damage = 5;
+
+	BulletInstance() : ProjectileInstance("bullet") {}
+	int GetFrames() const override
+	{
+		return frames;
+	}
+
+	int GetSpeed() const override
+	{
+		return speed;
+	}
+
+	float GetDamage() const override
+	{
+		return damage;
+	}
+
+	Unique<ProjectileInstance> Clone() const override
+	{
+		return std::make_unique<BulletInstance>(*this);
+	}
+};
+
+class GrenadeInstance : public ProjectileInstance
+{
+public:
+	static constexpr int frames = 8;
+	static constexpr int speed = 360;
+	static constexpr float damage = 12;
+
+	GrenadeInstance() : ProjectileInstance("grenade") {}
+	int GetFrames() const override
+	{
+		return frames;
+	}
+
+	int GetSpeed() const override
+	{
+		return speed;
+	}
+
+	float GetDamage() const override
+	{
+		return damage;
+	}
+
+	Unique<ProjectileInstance> Clone() const override
+	{
+		return std::make_unique<GrenadeInstance>(*this);
+	}
+};
+
+class RocketInstance : public ProjectileInstance
+{
+public:
+	static constexpr int frames = 11;
+	static constexpr int speed = 600;
+	static constexpr int damage = 10;
+
+	RocketInstance() : ProjectileInstance("rocket") {}
+	int GetFrames() const override
+	{
+		return frames;
+	}
+
+	int GetSpeed() const override
+	{
+		return speed;
+	}
+
+	float GetDamage() const override
+	{
+		return damage;
+	}
+
+	Unique<ProjectileInstance> Clone() const override
+	{
+		return std::make_unique<RocketInstance>(*this);
+	}
+};
+
+class ShellInstance : public ProjectileInstance
+{
+public:
+	static constexpr int frames = 8;
+	static constexpr int speed = 600;
+	static constexpr float damage = 20;
+
+	ShellInstance() : ProjectileInstance("shell") {}
+	int GetFrames() const override
+	{
+		return frames;
+	}
+
+	int GetSpeed() const override
+	{
+		return speed;
+	}
+
+	float GetDamage() const override
+	{
+		return damage;
+	}
+
+	Unique<ProjectileInstance> Clone() const override
+	{
+		return std::make_unique<ShellInstance>(*this);
+	}
+};
+} // namespace WoS

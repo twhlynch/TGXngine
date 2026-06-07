@@ -1,0 +1,7 @@
+# build output
+/.cache
+/build
+
+# OS specific
+.DS_Store
+*:Zone.Identifier

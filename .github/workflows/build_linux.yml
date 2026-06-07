@@ -1,0 +1,31 @@
+name: Build Linux
+
+on:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository and submodules
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+          lfs: true
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.12
+
+      - name: Install dependencies
+        run: |
+          sudo apt update
+          sudo apt install -y zlib1g-dev libx11-dev libxrandr-dev libxinerama-dev libxcursor-dev libxi-dev libgl1-mesa-dev libudev-dev libopenal-dev libogg-dev libvorbis-dev libflac-dev libfreetype6-dev
+
+      - name: Build
+        working-directory: .
+        run: |
+          python build.py --generate --build --release --optimise --publish --docs
