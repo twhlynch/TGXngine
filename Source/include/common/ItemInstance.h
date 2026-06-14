@@ -5,7 +5,7 @@
 #include "ItemStates.h"
 #include "Orders.h"
 
-namespace WoS
+namespace TGX
 {
 class ItemInstance : public Instance
 {
@@ -381,4 +381,4 @@ public:
 
 	virtual int GetCellCollisionMode() const = 0;
 };
-} // namespace WoS
+} // namespace TGX

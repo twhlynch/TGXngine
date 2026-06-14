@@ -4,7 +4,7 @@
 
 using Key = sf::Keyboard::Key;
 
-namespace WoS
+namespace TGX
 {
 class Keyboard
 {
@@ -23,4 +23,4 @@ public:
 
 	void KeyPressed(Key code);
 };
-} // namespace WoS
+} // namespace TGX

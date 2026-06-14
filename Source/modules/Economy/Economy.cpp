@@ -4,7 +4,7 @@
 #include "Logs.h"
 #include "module_interface.h"
 
-namespace WoS
+namespace TGX
 {
 extern "C"
 {
@@ -75,4 +75,4 @@ extern "C"
 		Log::Success("Economy Destroy");
 	}
 }
-} // namespace WoS
+} // namespace TGX

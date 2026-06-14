@@ -2,7 +2,7 @@
 
 #include "Core.h"
 
-namespace WoS
+namespace TGX
 {
 template <typename T>
 struct ObjectPoolNode
@@ -64,4 +64,4 @@ private:
 	Array<ObjectPoolNode<T>, N> objectPool;
 	ObjectPoolNode<T> *freeList = nullptr;
 };
-} // namespace WoS
+} // namespace TGX

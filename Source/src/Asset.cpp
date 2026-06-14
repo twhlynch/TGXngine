@@ -2,7 +2,7 @@
 #include "Logs.h"
 #include "WorldState.h"
 
-namespace WoS
+namespace TGX
 {
 Asset::Asset(
 	FNPTR_ASSET_AWAKE awake,
@@ -91,4 +91,4 @@ void Asset::Clear()
 	}
 }
 
-} // namespace WoS
+} // namespace TGX

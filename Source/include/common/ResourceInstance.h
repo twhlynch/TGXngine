@@ -2,7 +2,7 @@
 
 #include "Instance.h"
 
-namespace WoS
+namespace TGX
 {
 class ResourceInstance : public Instance
 {
@@ -12,4 +12,4 @@ public:
 		return 1;
 	}
 };
-} // namespace WoS
+} // namespace TGX

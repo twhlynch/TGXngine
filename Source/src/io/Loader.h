@@ -27,7 +27,7 @@
 
 using namespace nlohmann;
 
-namespace WoS
+namespace TGX
 {
 using FNPTR_INIT = void (*)();
 using FNPTR_DESTROY = void (*)(const String &);
@@ -74,4 +74,4 @@ public:
 	Vector<Unique<Economy>> &GetEconomies();
 	Vector<Unique<Triggers>> &GetGameTriggers();
 };
-} // namespace WoS
+} // namespace TGX

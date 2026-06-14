@@ -6,7 +6,7 @@
 
 using namespace nlohmann;
 
-namespace WoS
+namespace TGX
 {
 class Background
 {
@@ -33,4 +33,4 @@ public:
 	const inline static int rotationXLimit = 880;
 	const inline static int rotationYLimit = 500;
 };
-} // namespace WoS
+} // namespace TGX

@@ -21,7 +21,7 @@
 #undef LoadCursor
 #endif
 
-namespace WoS
+namespace TGX
 {
 Renderer::Renderer()
 {
@@ -317,4 +317,4 @@ void Renderer::LoadCursor(const String &file, bool center)
 void Renderer::Cancel(const Any &item)
 {
 }
-} // namespace WoS
+} // namespace TGX

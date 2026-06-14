@@ -1,6 +1,6 @@
 #pragma once
 
-namespace WoS
+namespace TGX
 {
 struct CollisionGrid
 {
@@ -27,4 +27,4 @@ struct CoordsSnapshot
 	int endY = 0;
 	int endValue = 0;
 };
-} // namespace WoS
+} // namespace TGX

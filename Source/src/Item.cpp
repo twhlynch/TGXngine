@@ -5,7 +5,7 @@
 #include "Lookup.h"
 #include "WorldState.h"
 
-namespace WoS
+namespace TGX
 {
 
 Item::Item(
@@ -159,4 +159,4 @@ void Item::Delete()
 		_delete(itemInstance->GetUid());
 	}
 }
-} // namespace WoS
+} // namespace TGX

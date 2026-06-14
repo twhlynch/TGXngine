@@ -6,7 +6,7 @@
 #include "Window.h"
 #include "module_interface.h"
 
-namespace WoS
+namespace TGX
 {
 extern "C"
 {
@@ -200,4 +200,4 @@ extern "C"
 		Log::Info("Cleared projectile states");
 	}
 }
-} // namespace WoS
+} // namespace TGX

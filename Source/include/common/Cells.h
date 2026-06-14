@@ -7,7 +7,7 @@
 #include "Flags.h"
 #include "Globals.h"
 
-namespace WoS
+namespace TGX
 {
 class Cells
 {
@@ -244,4 +244,4 @@ public:
 	Cells() = delete;
 	~Cells() = delete;
 };
-} // namespace WoS
+} // namespace TGX

@@ -5,10 +5,9 @@
 #include <thread>
 #include "Trigger.h"
 
-
 using namespace nlohmann;
 
-namespace WoS
+namespace TGX
 {
 inline Unique<std::thread> trigger_thread;
 inline bool trigger_running;
@@ -21,4 +20,4 @@ inline int triggerLimit = 10;
 
 void Run();
 bool HasWon();
-} // namespace WoS
+} // namespace TGX

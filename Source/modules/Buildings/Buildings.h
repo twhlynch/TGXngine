@@ -5,7 +5,7 @@
 #include "ItemInstance.h"
 #include "Window.h"
 
-namespace WoS
+namespace TGX
 {
 ItemInstance *globalItem;
 Map<String, Function<ItemInstance *()>> buildingStateRegistry;
@@ -81,4 +81,4 @@ private:
 using FNPTR_INIT = void (*)();
 
 Map<int, Buildings *> buildings;
-} // namespace WoS
+} // namespace TGX

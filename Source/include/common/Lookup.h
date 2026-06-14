@@ -2,7 +2,7 @@
 
 #include "WorldState.h"
 
-namespace WoS
+namespace TGX
 {
 struct LookUp
 {
@@ -47,4 +47,4 @@ struct LookUp
 		world.GetLookup()[uid] = index;
 	}
 };
-} // namespace WoS
+} // namespace TGX

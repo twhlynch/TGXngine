@@ -4,7 +4,7 @@
 #include "Lookup.h"
 #include "WorldState.h"
 
-namespace WoS
+namespace TGX
 {
 
 Resource::Resource(
@@ -143,4 +143,4 @@ void Resource::Clear()
 void Resource::Delete()
 {
 }
-} // namespace WoS
+} // namespace TGX

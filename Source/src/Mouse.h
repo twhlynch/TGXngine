@@ -4,7 +4,7 @@
 #include "Core.h"
 #include "Orders.h"
 
-namespace WoS
+namespace TGX
 {
 
 class Mouse
@@ -64,4 +64,4 @@ private:
 	float selectionBoxHeight = 0;
 };
 
-} // namespace WoS
+} // namespace TGX

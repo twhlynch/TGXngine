@@ -2,7 +2,7 @@
 
 #include <climits>
 
-namespace WoS
+namespace TGX
 {
 struct FloatingPoint
 {
@@ -73,4 +73,4 @@ struct Boundary
 		return _x >= x && _x <= w && _y >= y && _y <= h;
 	}
 };
-} // namespace WoS
+} // namespace TGX

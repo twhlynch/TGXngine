@@ -1,7 +1,7 @@
 #include "AI.h"
 #include "Logs.h"
 
-namespace WoS
+namespace TGX
 {
 AI::AI(
 	FNPTR_AI_AWAKE awake,
@@ -56,4 +56,4 @@ void AI::Delete()
 
 	_delete();
 }
-} // namespace WoS
+} // namespace TGX

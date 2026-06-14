@@ -2,7 +2,7 @@
 
 #include "Core.h"
 
-namespace WoS
+namespace TGX
 {
 using FNPTR_TRIGGERS_AWAKE = void (*)(String);
 using FNPTR_TRIGGERS_START = void (*)();
@@ -30,4 +30,4 @@ public:
 	void Clear();
 	void Delete();
 };
-} // namespace WoS
+} // namespace TGX

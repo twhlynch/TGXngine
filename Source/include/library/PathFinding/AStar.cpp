@@ -6,7 +6,7 @@
 #include "Node/Node.h"
 #include "StringUtils.hpp"
 
-namespace WoS
+namespace TGX
 {
 void AStar::Test()
 {
@@ -199,4 +199,4 @@ Vector<Point> AStar::GetPath() const
 {
 	return path;
 }
-} // namespace WoS
+} // namespace TGX

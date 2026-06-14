@@ -4,7 +4,7 @@
 #include "Core.h"
 #include "Point.h"
 
-namespace WoS
+namespace TGX
 {
 enum class PathfindingAlgorithm : std::uint8_t
 {
@@ -29,4 +29,4 @@ public:
 
 	Unique<ConfigurePath> configurePath;
 };
-} // namespace WoS
+} // namespace TGX

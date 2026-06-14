@@ -3,9 +3,9 @@
 #include <SFML/Graphics.hpp>
 #include <Common.hpp>
 
-namespace WoS
+namespace TGX
 {
 ProjectileInstance *globalProjectile;
 
 using FNPTR_INIT = void (*)();
-} // namespace WoS
+} // namespace TGX

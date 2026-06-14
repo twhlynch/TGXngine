@@ -5,7 +5,7 @@
 #include "Logs.h"
 #include "StringUtils.hpp"
 
-namespace WoS
+namespace TGX
 {
 class PassableGrid
 {
@@ -84,4 +84,4 @@ public:
 		}
 	}
 };
-} // namespace WoS
+} // namespace TGX

@@ -3,7 +3,7 @@
 #include <cmath>
 #include <tuple>
 
-namespace WoS
+namespace TGX
 {
 struct Point
 {
@@ -53,4 +53,4 @@ struct PointUID
 		return uid == other.uid;
 	}
 };
-} // namespace WoS
+} // namespace TGX

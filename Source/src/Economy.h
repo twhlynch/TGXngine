@@ -3,7 +3,7 @@
 #include "Core.h"
 #include "EconomyInstance.h"
 
-namespace WoS
+namespace TGX
 {
 using FNPTR_ECONOMY_AWAKE = EconomyInstance *(*)(String, int);
 using FNPTR_ECONOMY_START = void (*)();
@@ -42,4 +42,4 @@ public:
 	void Clear();
 	void Delete();
 };
-} // namespace WoS
+} // namespace TGX

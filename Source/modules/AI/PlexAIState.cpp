@@ -4,7 +4,7 @@
 #include "Orders.h"
 #include "WorldState.h"
 
-namespace WoS
+namespace TGX
 {
 void PlexAIState::Awake()
 {
@@ -27,4 +27,4 @@ void PlexAIState::Update()
 		}
 	}
 }
-} // namespace WoS
+} // namespace TGX

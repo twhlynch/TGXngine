@@ -3,7 +3,7 @@
 #include <SFML/Graphics.hpp>
 #include "Core.h"
 
-namespace WoS
+namespace TGX
 {
 using FNPTR_INTERFACE_AWAKE = void (*)(String);
 using FNPTR_INTERFACE_CREATE = void (*)();
@@ -42,4 +42,4 @@ public:
 	void Click();
 	void Clear();
 };
-} // namespace WoS
+} // namespace TGX

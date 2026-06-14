@@ -12,7 +12,7 @@
 #include "ResourceInstance.h"
 #include "common_export.h"
 
-namespace WoS
+namespace TGX
 {
 class WorldState
 {
@@ -706,4 +706,4 @@ private:
 	WorldState() = default;
 	~WorldState() = default;
 };
-} // namespace WoS
+} // namespace TGX

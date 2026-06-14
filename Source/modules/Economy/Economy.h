@@ -4,9 +4,9 @@
 #include "Window.h"
 #include "WorldState.h"
 
-namespace WoS
+namespace TGX
 {
 class Economy
 {
 };
-} // namespace WoS
+} // namespace TGX

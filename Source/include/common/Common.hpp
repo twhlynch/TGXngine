@@ -6,7 +6,7 @@
 #include "NextStep.h"
 #include "WorldState.h"
 
-namespace WoS
+namespace TGX
 {
 const float PI = std::numbers::pi_v<float>;
 
@@ -201,4 +201,4 @@ extern "C"
 		return itemUid;
 	}
 }
-} // namespace WoS
+} // namespace TGX

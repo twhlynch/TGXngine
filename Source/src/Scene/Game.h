@@ -14,7 +14,7 @@
 #include "WayPoints/WayPoints.h"
 #include "io/Loader.h"
 
-namespace WoS
+namespace TGX
 {
 class Game : public Scene
 {
@@ -67,4 +67,4 @@ private:
 protected:
 	bool LoadExtraResources(int currentLevel, json &level, json &requiredJsons);
 };
-} // namespace WoS
+} // namespace TGX

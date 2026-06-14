@@ -4,7 +4,7 @@
 #include "PhysicsDefinitions.h"
 #include "Point.h"
 
-namespace WoS
+namespace TGX
 {
 class QuadTree
 {
@@ -121,4 +121,4 @@ public:
 		lowerLeft = nullptr;
 	}
 };
-} // namespace WoS
+} // namespace TGX

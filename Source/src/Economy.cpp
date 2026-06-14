@@ -2,7 +2,7 @@
 #include "Logs.h"
 #include "WorldState.h"
 
-namespace WoS
+namespace TGX
 {
 Economy::Economy(
 	FNPTR_ECONOMY_AWAKE awake,
@@ -79,4 +79,4 @@ void Economy::Delete()
 		_delete();
 	}
 }
-} // namespace WoS
+} // namespace TGX

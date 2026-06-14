@@ -8,7 +8,7 @@
 
 using namespace nlohmann;
 
-namespace WoS
+namespace TGX
 {
 struct SidebarButtonData
 {
@@ -86,4 +86,4 @@ public:
 private:
 	void BuildImmediately();
 };
-} // namespace WoS
+} // namespace TGX

@@ -3,7 +3,7 @@
 #include <SFML/Graphics.hpp>
 #include "UI/Button.h"
 
-namespace WoS
+namespace TGX
 {
 class Scene
 {
@@ -35,4 +35,4 @@ public:
 		return name;
 	}
 };
-} // namespace WoS
+} // namespace TGX

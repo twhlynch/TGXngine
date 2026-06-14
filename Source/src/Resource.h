@@ -6,7 +6,7 @@
 
 using namespace nlohmann;
 
-namespace WoS
+namespace TGX
 {
 using FNPTR_RESOURCE_AWAKE = ResourceInstance *(*)(const String &);
 using FNPTR_RESOURCE_CREATE = void (*)(Vector<sf::Sprite *> *, Vector<sf::Texture *> *);
@@ -59,4 +59,4 @@ public:
 	int GetRemoteUID() const;
 	void Clear();
 };
-} // namespace WoS
+} // namespace TGX

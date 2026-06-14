@@ -3,7 +3,7 @@
 
 #include <utility>
 
-namespace WoS
+namespace TGX
 {
 Interface::Interface(
 	FNPTR_INTERFACE_AWAKE awake,
@@ -58,4 +58,4 @@ void Interface::Draw()
 {
 	draw();
 }
-} // namespace WoS
+} // namespace TGX

@@ -3,7 +3,7 @@
 #include "Logs.h"
 #include "WorldState.h"
 
-namespace WoS
+namespace TGX
 {
 Keyboard::Keyboard()
 {
@@ -47,4 +47,4 @@ void Keyboard::KeyPressed(Key code)
 			break;
 	}
 }
-} // namespace WoS
+} // namespace TGX

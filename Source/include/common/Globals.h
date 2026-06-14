@@ -2,7 +2,7 @@
 
 #include "Core.h"
 
-namespace WoS
+namespace TGX
 {
 struct Globals
 {
@@ -29,4 +29,4 @@ struct Globals
 	static inline unsigned int targetFPS = 60;
 	static inline bool verticalSync = true;
 };
-} // namespace WoS
+} // namespace TGX

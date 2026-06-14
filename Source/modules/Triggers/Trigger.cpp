@@ -2,7 +2,7 @@
 #include <functional>
 #include <utility>
 
-namespace WoS
+namespace TGX
 {
 TimedTrigger::TimedTrigger(UIAction action, int interval, bool repeat)
 {
@@ -70,4 +70,4 @@ bool ConditionalTrigger::Elapse()
 
 	return false;
 }
-} // namespace WoS
+} // namespace TGX

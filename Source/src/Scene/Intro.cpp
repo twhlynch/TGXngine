@@ -7,7 +7,7 @@
 #include "Window.h"
 #include "WorldState.h"
 
-namespace WoS
+namespace TGX
 {
 Intro::Intro()
 {
@@ -201,4 +201,4 @@ void Intro::Free()
 {
 	buttons.clear();
 }
-} // namespace WoS
+} // namespace TGX

@@ -2,7 +2,7 @@
 #include "Renderer.h"
 #include "Window.h"
 
-namespace WoS
+namespace TGX
 {
 TextButton::TextButton()
 {
@@ -187,4 +187,4 @@ void TextButton::SetOutlineColour(const String &colour)
 void TextButton::Clear()
 {
 }
-} // namespace WoS
+} // namespace TGX

@@ -1,6 +1,6 @@
 #pragma once
 
-namespace WoS
+namespace TGX
 {
 struct Flags
 {
@@ -30,4 +30,4 @@ struct Flags
 	inline static const int FOG_E = 8;
 	inline static const int FOG_S = 9;
 };
-} // namespace WoS
+} // namespace TGX

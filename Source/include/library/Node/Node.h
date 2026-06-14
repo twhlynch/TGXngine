@@ -3,7 +3,7 @@
 #include <cstdint>
 #include <functional>
 
-namespace WoS
+namespace TGX
 {
 struct Node
 {
@@ -116,14 +116,14 @@ struct Node
 		return x == other.x && y == other.y;
 	}
 };
-} // namespace WoS
+} // namespace TGX
 
 namespace std
 {
 template <>
-struct hash<WoS::Node>
+struct hash<TGX::Node>
 {
-	size_t operator()(const WoS::Node &node) const
+	size_t operator()(const TGX::Node &node) const
 	{
 		return hash<int>()(node.x) ^ (hash<int>()(node.y) << 1);
 	}

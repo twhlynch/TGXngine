@@ -5,7 +5,7 @@
 #include "NextStep.h"
 #include "Point.h"
 
-namespace WoS
+namespace TGX
 {
 class InfantryState : public ItemInstance
 {
@@ -305,4 +305,4 @@ public:
 		return reloadTime;
 	}
 };
-} // namespace WoS
+} // namespace TGX

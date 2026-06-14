@@ -7,7 +7,7 @@
 
 using namespace nlohmann;
 
-namespace WoS
+namespace TGX
 {
 Settings::Settings()
 {
@@ -67,4 +67,4 @@ Settings &Settings::GetInstance()
 	static Settings settings;
 	return settings;
 }
-} // namespace WoS
+} // namespace TGX

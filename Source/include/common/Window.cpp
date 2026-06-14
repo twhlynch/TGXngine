@@ -3,7 +3,7 @@
 #include "SFML/Graphics/Text.hpp"
 #include "WorldState.h"
 
-namespace WoS
+namespace TGX
 {
 
 Window &Window::GetInstance()
@@ -203,4 +203,4 @@ void Window::MoveView(float x, float y)
 	_fixed.move(x, y);
 }
 
-} // namespace WoS
+} // namespace TGX

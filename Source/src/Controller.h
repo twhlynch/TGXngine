@@ -3,7 +3,7 @@
 #include <SFML/Window/Joystick.hpp>
 #include "Core.h"
 
-namespace WoS
+namespace TGX
 {
 enum class ControllerAction
 {
@@ -50,4 +50,4 @@ private:
 
 	float deadzone = 15.f;
 };
-} // namespace WoS
+} // namespace TGX

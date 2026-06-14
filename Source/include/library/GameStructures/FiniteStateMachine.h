@@ -6,7 +6,7 @@
 #include "Logs.h"
 #include "StringUtils.hpp"
 
-namespace WoS
+namespace TGX
 {
 class FiniteStateMachine
 {
@@ -94,4 +94,4 @@ private:
 	State currentState;
 	HashableMap<Pair<State, Event>, Transition, PairHash> transitions;
 };
-} // namespace WoS
+} // namespace TGX

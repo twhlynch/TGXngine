@@ -4,7 +4,7 @@
 #include "Window.h"
 #include "WorldState.h"
 
-namespace WoS
+namespace TGX
 {
 Sidebar::Sidebar() = default;
 
@@ -225,4 +225,4 @@ void Sidebar::Clear()
 
 	buttons.clear();
 }
-} // namespace WoS
+} // namespace TGX

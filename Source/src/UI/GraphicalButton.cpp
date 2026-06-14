@@ -5,7 +5,7 @@
 #include "Window.h"
 #include "WorldState.h"
 
-namespace WoS
+namespace TGX
 {
 GraphicalButton::GraphicalButton()
 {
@@ -102,4 +102,4 @@ void GraphicalButton::SetButton(
 void GraphicalButton::Clear()
 {
 }
-} // namespace WoS
+} // namespace TGX

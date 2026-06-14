@@ -7,7 +7,7 @@
 
 using namespace nlohmann;
 
-namespace WoS
+namespace TGX
 {
 class Intro : public Scene
 {
@@ -28,4 +28,4 @@ public:
 	void Close() override;
 	void Free() override;
 };
-} // namespace WoS
+} // namespace TGX

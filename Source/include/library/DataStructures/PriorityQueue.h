@@ -4,7 +4,7 @@
 #include "Core.h"
 #include "Node/Node.h"
 
-namespace WoS
+namespace TGX
 {
 template <typename T>
 class PriorityQueue
@@ -95,4 +95,4 @@ public:
 		heap.clear();
 	}
 };
-} // namespace WoS
+} // namespace TGX

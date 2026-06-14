@@ -2,7 +2,7 @@
 #include <cstdint>
 #include <functional>
 
-namespace WoS
+namespace TGX
 {
 enum class TraversalType : uint8_t
 {
@@ -29,4 +29,4 @@ inline std::function<bool(int, int)> GetTraversalPredicate(TraversalType type)
 			};
 	}
 }
-} // namespace WoS
+} // namespace TGX

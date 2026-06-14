@@ -5,7 +5,7 @@
 #include "Navigation.h"
 #include "Window.h"
 
-namespace WoS
+namespace TGX
 {
 Grid::Grid(json &level, json &obstruction_json)
 {
@@ -213,4 +213,4 @@ void Grid::Draw()
 		}
 	}
 }
-} // namespace WoS
+} // namespace TGX

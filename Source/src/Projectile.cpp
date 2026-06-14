@@ -2,7 +2,7 @@
 #include "Logs.h"
 #include "WorldState.h"
 
-namespace WoS
+namespace TGX
 {
 Projectile::Projectile(
 	FNPTR_PROJECTILE_AWAKE awake,
@@ -103,4 +103,4 @@ void Projectile::Clear()
 {
 	clear();
 }
-} // namespace WoS
+} // namespace TGX

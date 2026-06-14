@@ -5,7 +5,7 @@
 #include "Lookup.h"
 #include "module_interface.h"
 
-namespace WoS
+namespace TGX
 {
 extern "C"
 {
@@ -102,4 +102,4 @@ extern "C"
 	{
 	}
 }
-} // namespace WoS
+} // namespace TGX

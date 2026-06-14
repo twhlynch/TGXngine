@@ -12,7 +12,7 @@
 #include "Settings.h"
 #include "WorldState.h"
 
-namespace WoS
+namespace TGX
 {
 void Init()
 {
@@ -41,11 +41,11 @@ void Init()
 
 	renderer.Start();
 }
-} // namespace WoS
+} // namespace TGX
 
 int main()
 {
-	WoS::Init();
+	TGX::Init();
 
 	return 0;
 }

@@ -1,10 +1,10 @@
 #include "WayPoints.h"
 
-namespace WoS
+namespace TGX
 {
 WayPoints::WayPoints() = default;
 
 void WayPoints::Draw()
 {
 }
-} // namespace WoS
+} // namespace TGX

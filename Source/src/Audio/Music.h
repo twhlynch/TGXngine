@@ -3,7 +3,7 @@
 #include <SFML/Audio.hpp>
 #include "Core.h"
 
-namespace WoS
+namespace TGX
 {
 class Music
 {
@@ -24,4 +24,4 @@ private:
 
 	sf::Music music;
 };
-} // namespace WoS
+} // namespace TGX

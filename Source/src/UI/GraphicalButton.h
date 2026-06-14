@@ -3,7 +3,7 @@
 #include <SFML/Graphics.hpp>
 #include "Button.h"
 
-namespace WoS
+namespace TGX
 {
 class GraphicalButton : public Button
 {
@@ -20,4 +20,4 @@ public:
 	void SetButton(const String &text, UIAction action, const String &value, const String &alignment, float x, float y, int width, int height, int xOffset, int yOffset) override;
 	void Clear() override;
 };
-} // namespace WoS
+} // namespace TGX

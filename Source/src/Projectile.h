@@ -4,7 +4,7 @@
 #include <nlohmann/json.hpp>
 #include "ProjectileInstance.h"
 
-namespace WoS
+namespace TGX
 {
 using FNPTR_PROJECTILE_AWAKE = ProjectileInstance *(*)(String);
 using FNPTR_PROJECTILE_CREATE = void (*)(Vector<sf::Sprite *> *, Vector<sf::Texture *> *, String);
@@ -44,4 +44,4 @@ public:
 	ProjectileInstance *GetProjectileInstance();
 	void Clear();
 };
-} // namespace WoS
+} // namespace TGX

@@ -6,7 +6,7 @@
 
 using namespace nlohmann;
 
-namespace WoS
+namespace TGX
 {
 class Grid
 {
@@ -28,4 +28,4 @@ private:
 	Vector<Vector<int>> currentMapTerrainGrid;
 	Vector<Vector<int>> currentMapIsleGrid;
 };
-} // namespace WoS
+} // namespace TGX

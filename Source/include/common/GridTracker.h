@@ -2,7 +2,7 @@
 
 #include "Core.h"
 
-namespace WoS
+namespace TGX
 {
 struct GridTracker
 {
@@ -17,4 +17,4 @@ struct GridTracker
 		cells_grid.clear();
 	}
 };
-} // namespace WoS
+} // namespace TGX

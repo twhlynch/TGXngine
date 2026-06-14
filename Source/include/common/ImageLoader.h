@@ -7,7 +7,7 @@
 #include "ResourceInstance.h"
 #include "common_export.h"
 
-namespace WoS
+namespace TGX
 {
 class ImageLoader
 {
@@ -76,4 +76,4 @@ void ImageLoader::Delete()
 	Log::Clean("Cleaning the textureMap");
 	textureMap.clear();
 }
-} // namespace WoS
+} // namespace TGX

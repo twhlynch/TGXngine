@@ -1,10 +1,10 @@
 #include "Physics.h"
 
-namespace WoS
+namespace TGX
 {
 Physics &Physics::GetInstance()
 {
 	static Physics physics;
 	return physics;
 }
-} // namespace WoS
+} // namespace TGX

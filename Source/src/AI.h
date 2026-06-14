@@ -2,7 +2,7 @@
 
 #include "Core.h"
 
-namespace WoS
+namespace TGX
 {
 using FNPTR_AI_AWAKE = void (*)(const String &);
 using FNPTR_AI_START = void (*)();
@@ -34,4 +34,4 @@ public:
 	void Clear();
 	void Delete();
 };
-} // namespace WoS
+} // namespace TGX

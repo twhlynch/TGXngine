@@ -2,7 +2,7 @@
 
 #include <cstdint>
 
-namespace WoS
+namespace TGX
 {
 enum class ItemStates : std::uint8_t
 {
@@ -17,4 +17,4 @@ enum class ItemStates : std::uint8_t
 	Flying,
 	Sailing,
 };
-} // namespace WoS
+} // namespace TGX

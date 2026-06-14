@@ -11,7 +11,7 @@
 #include <vector>
 #include "Logs.h"
 
-namespace WoS
+namespace TGX
 {
 class Vector2D
 {
@@ -279,4 +279,4 @@ public:
 	}
 };
 
-} // namespace WoS
+} // namespace TGX

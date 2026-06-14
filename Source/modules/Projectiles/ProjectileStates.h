@@ -2,7 +2,7 @@
 
 #include "ProjectileInstance.h"
 
-namespace WoS
+namespace TGX
 {
 class BulletInstance : public ProjectileInstance
 {
@@ -119,4 +119,4 @@ public:
 		return std::make_unique<ShellInstance>(*this);
 	}
 };
-} // namespace WoS
+} // namespace TGX

@@ -4,7 +4,7 @@
 #include "Logs.h"
 #include "WorldState.h"
 
-namespace WoS
+namespace TGX
 {
 Controller::Controller()
 {
@@ -89,4 +89,4 @@ float Controller::GetAxis(sf::Joystick::Axis axis)
 
 	return value / 100.f;
 }
-} // namespace WoS
+} // namespace TGX

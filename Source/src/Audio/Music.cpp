@@ -1,7 +1,7 @@
 #include "Music.h"
 #include "Logs.h"
 
-namespace WoS
+namespace TGX
 {
 Music::Music(Song song)
 {
@@ -40,4 +40,4 @@ void Music::Stop()
 {
 	music.stop();
 }
-} // namespace WoS
+} // namespace TGX

@@ -15,7 +15,7 @@
 #include "Traversal/Traversal.h"
 #include "WorldState.h"
 
-namespace WoS
+namespace TGX
 {
 class Navigation
 {
@@ -500,4 +500,4 @@ private:
 	Map<PathfindingAlgorithm, Unique<IPathfinding>> pathfindingAlgorithms;
 	PathfindingAlgorithm pathfindingAlgorithm = PathfindingAlgorithm::AStar;
 };
-} // namespace WoS
+} // namespace TGX

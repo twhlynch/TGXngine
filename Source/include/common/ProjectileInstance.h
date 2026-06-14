@@ -4,7 +4,7 @@
 
 #include "Core.h"
 
-namespace WoS
+namespace TGX
 {
 class ProjectileInstance
 {
@@ -49,4 +49,4 @@ protected:
 	String name;
 	ProjectileInstance(String inName) : name(std::move(inName)) {}
 };
-} // namespace WoS
+} // namespace TGX

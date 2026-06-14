@@ -1,7 +1,7 @@
 #include "Triggers.h"
 #include "Logs.h"
 
-namespace WoS
+namespace TGX
 {
 Triggers::Triggers(
 	FNPTR_TRIGGERS_AWAKE awake,
@@ -39,4 +39,4 @@ void Triggers::Delete()
 {
 	_delete();
 }
-} // namespace WoS
+} // namespace TGX

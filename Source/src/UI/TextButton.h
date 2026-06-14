@@ -2,7 +2,7 @@
 
 #include "Button.h"
 
-namespace WoS
+namespace TGX
 {
 class TextButton : public Button
 {
@@ -36,4 +36,4 @@ public:
 	void SetOutlineSize(unsigned int size);
 	void Clear() override;
 };
-} // namespace WoS
+} // namespace TGX

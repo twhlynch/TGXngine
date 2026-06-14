@@ -9,7 +9,7 @@
 
 using namespace nlohmann;
 
-namespace WoS
+namespace TGX
 {
 class Renderer
 {
@@ -43,4 +43,4 @@ private:
 	Renderer();
 	~Renderer();
 };
-} // namespace WoS
+} // namespace TGX

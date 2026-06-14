@@ -7,7 +7,7 @@
 #include "Utils.hpp"
 #include "WorldState.h"
 
-namespace WoS
+namespace TGX
 {
 
 // Module-local storage structures for this state instance cleanly declared at namespace level
@@ -208,4 +208,4 @@ void BuilderAIState::PrintNodeRecursive(const Ref<BuildNode> &node, int depth) c
 	}
 }
 
-} // namespace WoS
+} // namespace TGX

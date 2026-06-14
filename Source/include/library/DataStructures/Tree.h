@@ -5,7 +5,7 @@
 #include <type_traits>
 #include "Core.h"
 
-namespace WoS
+namespace TGX
 {
 template <typename Enumeration>
 auto as_integer(Enumeration const value)
@@ -633,4 +633,4 @@ private:
 		}
 	}
 };
-} // namespace WoS
+} // namespace TGX

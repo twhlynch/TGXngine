@@ -2,7 +2,7 @@
 
 #include "Orders.h"
 
-namespace WoS
+namespace TGX
 {
 class Updater
 {
@@ -36,4 +36,4 @@ private:
 	static inline bool updateFrame = false;
 	static inline Orders::Order newOrders;
 };
-} // namespace WoS
+} // namespace TGX

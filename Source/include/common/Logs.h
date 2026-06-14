@@ -5,7 +5,7 @@
 #include <string>
 #include <string_view>
 
-namespace WoS
+namespace TGX
 {
 struct Log
 {
@@ -273,4 +273,4 @@ public:
 		return std::string{name};
 	}
 };
-} // namespace WoS
+} // namespace TGX

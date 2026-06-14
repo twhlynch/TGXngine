@@ -7,7 +7,7 @@
 #include "StringUtils.hpp"
 #include "module_interface.h"
 
-namespace WoS
+namespace TGX
 {
 extern "C"
 {
@@ -203,4 +203,4 @@ extern "C"
 		Log::Print(StringConcat("Destroy static building { ", name, " } "));
 	}
 }
-} // namespace WoS
+} // namespace TGX

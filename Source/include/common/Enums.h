@@ -2,7 +2,7 @@
 
 #include "Core.h"
 
-namespace WoS
+namespace TGX
 {
 enum class Alignment : std::uint8_t
 {
@@ -106,4 +106,4 @@ inline String UIActionToString(UIAction action)
 			return "none";
 	}
 }
-} // namespace WoS
+} // namespace TGX

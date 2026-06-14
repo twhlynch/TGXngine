@@ -1,6 +1,6 @@
 #pragma once
 
-namespace WoS
+namespace TGX
 {
 class Settings
 {
@@ -17,4 +17,4 @@ public:
 	Settings(Settings &&) = delete;
 	Settings &operator=(Settings &&) = delete;
 };
-} // namespace WoS
+} // namespace TGX

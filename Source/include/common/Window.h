@@ -10,7 +10,7 @@
 #include "SFML/Window/Event.hpp"
 #include "common_export.h"
 
-namespace WoS
+namespace TGX
 {
 
 class Window
@@ -58,4 +58,4 @@ private:
 	std::function<void(sf::Event)> _mouse;
 };
 
-} // namespace WoS
+} // namespace TGX

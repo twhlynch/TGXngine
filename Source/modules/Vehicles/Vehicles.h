@@ -11,7 +11,7 @@
 #include "VehicleStates.h"
 #include "Window.h"
 
-namespace WoS
+namespace TGX
 {
 using Random = effolkronium::random_static;
 
@@ -208,4 +208,4 @@ void OnPath(const Vector<Point> &path);
 void SetTacticalCoordinates(ItemInstance *itemInstance, Vector<Point> path, float toX, float toY, int sight);
 
 Vector<ItemInstance *> Detect(ItemInstance *itemInstance, const Vector<ItemInstance *> &nearByItems);
-} // namespace WoS
+} // namespace TGX

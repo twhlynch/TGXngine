@@ -4,7 +4,7 @@
 #include "Enums.h"
 #include "WorldState.h"
 
-namespace WoS
+namespace TGX
 {
 class Trigger
 {
@@ -49,4 +49,4 @@ public:
 	ConditionalTrigger(UIAction action, const String &value, Function<bool()> conditionalFunction);
 	bool Elapse() override;
 };
-} // namespace WoS
+} // namespace TGX

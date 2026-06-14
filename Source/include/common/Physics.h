@@ -9,7 +9,7 @@
 #include "WorldState.h"
 #include "common_export.h"
 
-namespace WoS
+namespace TGX
 {
 class Physics
 {
@@ -133,4 +133,4 @@ public:
 		}
 	}
 };
-} // namespace WoS
+} // namespace TGX

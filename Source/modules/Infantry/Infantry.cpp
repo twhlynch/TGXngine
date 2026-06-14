@@ -15,7 +15,7 @@
 #include "StringUtils.hpp"
 #include "module_interface.h"
 
-namespace WoS
+namespace TGX
 {
 extern "C"
 {
@@ -977,4 +977,4 @@ void Load(InfantryState *itemInstance)
 void TestSearch()
 {
 }
-} // namespace WoS
+} // namespace TGX

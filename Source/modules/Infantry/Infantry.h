@@ -10,7 +10,7 @@
 #include "PhysicsDefinitions.h"
 #include "Window.h"
 
-namespace WoS
+namespace TGX
 {
 using Random = effolkronium::random_static;
 
@@ -194,4 +194,4 @@ void Load(InfantryState *itemInstance);
 void Unload(InfantryState *itemInstance);
 
 Vector<ItemInstance *> Detect(ItemInstance *itemInstance, const Vector<ItemInstance *> &nearByItems);
-} // namespace WoS
+} // namespace TGX

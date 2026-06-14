@@ -4,7 +4,7 @@
 #include <limits>
 #include "Core.h"
 
-namespace WoS
+namespace TGX
 {
 inline float SATCollision(const Array<float, 8> &poly1, const Array<float, 8> &poly2)
 {
@@ -48,4 +48,4 @@ inline float SATCollision(const Array<float, 8> &poly1, const Array<float, 8> &p
 
 	return overlap;
 }
-} // namespace WoS
+} // namespace TGX

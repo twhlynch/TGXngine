@@ -7,7 +7,7 @@
 #include "ResourcesStates.h"
 #include "Window.h"
 
-namespace WoS
+namespace TGX
 {
 ResourceInstance *globalResource;
 
@@ -29,4 +29,4 @@ public:
 };
 
 Map<int, Unique<Resources>> resources;
-} // namespace WoS
+} // namespace TGX

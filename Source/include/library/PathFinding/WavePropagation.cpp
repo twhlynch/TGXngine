@@ -1,6 +1,6 @@
 #include "WavePropagation.h"
 
-namespace WoS
+namespace TGX
 {
 void WavePropagation::Search(
 	const Point &start,
@@ -137,4 +137,4 @@ Vector<Vector<int>> WavePropagation::GetField() const
 {
 	return flowField;
 }
-} // namespace WoS
+} // namespace TGX

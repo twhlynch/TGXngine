@@ -1,7 +1,7 @@
 #pragma once
 
-namespace WoS::Debug
+namespace TGX::Debug
 {
 inline bool showGrid = false;
 inline bool showWayPoints = false;
-} // namespace WoS::Debug
+} // namespace TGX::Debug

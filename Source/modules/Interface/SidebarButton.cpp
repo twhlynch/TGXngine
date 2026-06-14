@@ -6,7 +6,7 @@
 #include "Window.h"
 #include "WorldState.h"
 
-namespace WoS
+namespace TGX
 {
 SidebarButton::SidebarButton() = default;
 
@@ -338,4 +338,4 @@ void SidebarButton::Clear()
 	spriteTextures.clear();
 	frame = 0;
 }
-} // namespace WoS
+} // namespace TGX

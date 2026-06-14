@@ -3,7 +3,7 @@
 #include <utility>
 #include "Core.h"
 
-namespace WoS
+namespace TGX
 {
 class AssetState
 {
@@ -50,4 +50,4 @@ public:
 
 	virtual int GetFrames() const = 0;
 };
-} // namespace WoS
+} // namespace TGX

@@ -4,7 +4,7 @@
 #include <functional>
 #include "Core.h"
 
-namespace WoS
+namespace TGX
 {
 
 struct BuildNode
@@ -103,4 +103,4 @@ public:
 // Define our dynamic creator function signature allocation type cleanly
 using StateFactory = std::function<AIState *()>;
 
-} // namespace WoS
+} // namespace TGX

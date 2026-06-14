@@ -2,7 +2,7 @@
 #include "Enums.h"
 #include "module_interface.h"
 
-namespace WoS
+namespace TGX
 {
 extern "C"
 {
@@ -99,4 +99,4 @@ bool HasWon()
 	}
 	return true;
 }
-} // namespace WoS
+} // namespace TGX

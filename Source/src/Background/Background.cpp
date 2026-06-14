@@ -4,7 +4,7 @@
 #include "Window.h"
 #include "WorldState.h"
 
-namespace WoS
+namespace TGX
 {
 Background::Background(json &level)
 {
@@ -114,4 +114,4 @@ int Background::GetHeight() const
 {
 	return backgroundHeight;
 }
-} // namespace WoS
+} // namespace TGX

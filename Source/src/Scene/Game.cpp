@@ -17,7 +17,7 @@
 #include "Window.h"
 #include "WorldState.h"
 
-namespace WoS
+namespace TGX
 {
 Game::Game()
 {
@@ -508,7 +508,7 @@ void Game::HandleSingleSelection()
 
 		for (int uid : localSelection)
 		{
-			int currentIndex = WoS::LookUp::Get(uid);
+			int currentIndex = TGX::LookUp::Get(uid);
 			if (currentIndex == -1)
 			{
 				continue;
@@ -810,4 +810,4 @@ std::optional<nlohmann::json> Game::LoadJsonFile(std::string_view filePath)
 
 	return parsedJson;
 }
-} // namespace WoS
+} // namespace TGX

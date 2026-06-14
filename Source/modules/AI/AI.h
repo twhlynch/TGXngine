@@ -8,8 +8,8 @@
 
 using namespace nlohmann;
 
-namespace WoS
+namespace TGX
 {
 // Declared as extern so the compiler knows it exists without allocating memory here
 extern Vector<AIState *> activeOpponentStates;
-} // namespace WoS
+} // namespace TGX

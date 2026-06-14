@@ -1,10 +1,10 @@
 #include "WorldState.h"
 
-namespace WoS
+namespace TGX
 {
 WorldState &WorldState::GetInstance()
 {
 	static WorldState world;
 	return world;
 }
-} // namespace WoS
+} // namespace TGX

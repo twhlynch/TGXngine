@@ -2,7 +2,7 @@
 
 #include "ResourceInstance.h"
 
-namespace WoS
+namespace TGX
 {
 class ResourcesStates : public ResourceInstance
 {
@@ -49,4 +49,4 @@ public:
 		return radius;
 	}
 };
-} // namespace WoS
+} // namespace TGX

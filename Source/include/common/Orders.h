@@ -2,7 +2,7 @@
 
 #include "Logs.h"
 
-namespace WoS
+namespace TGX
 {
 class Orders
 {
@@ -164,14 +164,14 @@ public:
 		return Order::None;
 	}
 };
-} // namespace WoS
+} // namespace TGX
 
 namespace std
 {
 template <>
-struct hash<WoS::Orders::Order>
+struct hash<TGX::Orders::Order>
 {
-	std::size_t operator()(WoS::Orders::Order o) const noexcept
+	std::size_t operator()(TGX::Orders::Order o) const noexcept
 	{
 		return std::hash<int>()(static_cast<int>(o));
 	}

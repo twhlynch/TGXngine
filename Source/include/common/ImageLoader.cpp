@@ -1,10 +1,10 @@
 #include "ImageLoader.h"
 
-namespace WoS
+namespace TGX
 {
 ImageLoader &ImageLoader::GetInstance()
 {
 	static ImageLoader imageLoader;
 	return imageLoader;
 }
-} // namespace WoS
+} // namespace TGX

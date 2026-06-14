@@ -6,7 +6,7 @@
 
 using namespace nlohmann;
 
-namespace WoS
+namespace TGX
 {
 class Sidebar
 {
@@ -26,4 +26,4 @@ public:
 	void Restore();
 	void Clear();
 };
-} // namespace WoS
+} // namespace TGX

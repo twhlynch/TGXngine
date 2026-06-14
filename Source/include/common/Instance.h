@@ -2,7 +2,7 @@
 
 #include "Core.h"
 
-namespace WoS
+namespace TGX
 {
 class Instance
 {
@@ -122,4 +122,4 @@ public:
 	virtual int GetFrames() const = 0;
 	virtual float GetRadius() const = 0;
 };
-} // namespace WoS
+} // namespace TGX

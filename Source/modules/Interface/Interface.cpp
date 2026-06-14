@@ -7,7 +7,7 @@
 #include "WorldState.h"
 #include "module_interface.h"
 
-namespace WoS
+namespace TGX
 {
 
 Sidebar &GetSidebar()
@@ -122,4 +122,4 @@ extern "C"
 		Log::Clean("Destroy interface " + name);
 	}
 }
-} // namespace WoS
+} // namespace TGX

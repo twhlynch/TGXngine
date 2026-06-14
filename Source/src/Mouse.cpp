@@ -6,7 +6,7 @@
 
 #include <cmath>
 
-namespace WoS
+namespace TGX
 {
 
 Mouse::Mouse()
@@ -188,4 +188,4 @@ float Mouse::GetSelectionBoxHeight() const
 	return selectionBoxHeight;
 }
 
-} // namespace WoS
+} // namespace TGX

@@ -5,7 +5,7 @@
 #include "AssetState.h"
 #include "Core.h"
 
-namespace WoS
+namespace TGX
 {
 using FNPTR_ASSET_AWAKE = AssetState *(*)(String);
 using FNPTR_ASSET_CREATE = void (*)(Vector<sf::Sprite *> *, Vector<sf::Texture *> *, String);
@@ -49,4 +49,4 @@ public:
 
 	AssetState *GetAssetState() { return assetState; }
 };
-} // namespace WoS
+} // namespace TGX

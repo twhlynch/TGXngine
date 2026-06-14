@@ -3,7 +3,7 @@
 #include <iostream>
 #include "Heuristic/Heuristic.h"
 
-namespace WoS
+namespace TGX
 {
 enum class PathDirections : std::uint8_t
 {
@@ -97,4 +97,4 @@ public:
 		return cellValue == 0;
 	}
 };
-} // namespace WoS
+} // namespace TGX

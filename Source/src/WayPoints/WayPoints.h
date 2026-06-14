@@ -5,7 +5,7 @@
 
 using namespace nlohmann;
 
-namespace WoS
+namespace TGX
 {
 class WayPoints
 {
@@ -14,4 +14,4 @@ public:
 	~WayPoints() = default;
 	void Draw();
 };
-} // namespace WoS
+} // namespace TGX

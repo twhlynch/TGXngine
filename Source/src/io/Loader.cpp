@@ -9,7 +9,7 @@ namespace
 std::wstring s2ws(const std::string &s);
 }
 
-namespace WoS
+namespace TGX
 {
 
 Loader::Loader()
@@ -442,7 +442,7 @@ void Loader::AssignEconomy(json &level)
 
 		auto &dll = dlls["economy"];
 
-		auto economy = std::make_unique<WoS::Economy>(
+		auto economy = std::make_unique<TGX::Economy>(
 			(FNPTR_ECONOMY_AWAKE)GET_PROC(dll, "Awake"),
 			(FNPTR_ECONOMY_START)GET_PROC(dll, "Start"),
 			(FNPTR_ECONOMY_UPDATE)GET_PROC(dll, "Update"),
@@ -637,4 +637,4 @@ std::wstring s2ws(const std::string &str)
 }
 } // namespace
 
-} // namespace WoS
+} // namespace TGX

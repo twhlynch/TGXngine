@@ -14,7 +14,7 @@
 
 #include <iostream>
 
-namespace WoS
+namespace TGX
 {
 extern "C"
 {
@@ -1011,4 +1011,4 @@ void TestSearch()
 		}
 	}
 }
-} // namespace WoS
+} // namespace TGX

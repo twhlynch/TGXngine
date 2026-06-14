@@ -6,7 +6,7 @@
 #include "Logs.h"
 #include "Node/Node.h"
 
-namespace WoS
+namespace TGX
 {
 template <typename T>
 class Heap
@@ -208,4 +208,4 @@ public:
 		return false;
 	}
 };
-} // namespace WoS
+} // namespace TGX

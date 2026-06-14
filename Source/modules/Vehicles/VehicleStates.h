@@ -6,7 +6,7 @@
 #include "NextStep.h"
 #include "Point.h"
 
-namespace WoS
+namespace TGX
 {
 class VehicleState : public ItemInstance
 {
@@ -471,4 +471,4 @@ public:
 		return reloadTime;
 	}
 };
-} // namespace WoS
+} // namespace TGX

@@ -6,7 +6,7 @@
 #include "IPathfinding.h"
 #include "Point.h"
 
-namespace WoS
+namespace TGX
 {
 class WavePropagation : public IPathfinding
 {
@@ -26,4 +26,4 @@ private:
 	Vector<Vector<int>> flowField;
 	Vector<Point> path;
 };
-} // namespace WoS
+} // namespace TGX

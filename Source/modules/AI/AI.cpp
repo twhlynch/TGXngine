@@ -5,7 +5,7 @@
 #include "Logs.h"
 #include "module_interface.h"
 
-namespace WoS
+namespace TGX
 {
 // Allocate the actual storage space memory exactly ONCE inside this single implementation object
 Vector<AIState *> activeOpponentStates;
@@ -124,4 +124,4 @@ extern "C"
 
 	MODULE_API void Destroy() {}
 }
-} // namespace WoS
+} // namespace TGX

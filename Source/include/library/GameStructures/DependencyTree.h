@@ -9,7 +9,7 @@
 
 using namespace nlohmann;
 
-namespace WoS
+namespace TGX
 {
 class DependencyTree
 {
@@ -225,4 +225,4 @@ public:
 		}
 	}
 };
-} // namespace WoS
+} // namespace TGX

@@ -1,7 +1,7 @@
 #pragma once
 #include "Core.h"
 
-namespace WoS
+namespace TGX
 {
 struct ResourceRule
 {
@@ -19,4 +19,4 @@ struct EconomyState
 };
 
 static EconomyState globalEconomyState;
-} // namespace WoS
+} // namespace TGX

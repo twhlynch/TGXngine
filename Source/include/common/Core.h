@@ -15,7 +15,7 @@
 #include <variant>
 #include <vector>
 
-namespace WoS
+namespace TGX
 {
 template <typename T>
 using Unique = std::unique_ptr<T>;
@@ -59,4 +59,4 @@ using Any = std::any;
 
 template <typename K, typename V, typename H>
 using HashableMap = std::unordered_map<K, V, H>;
-} // namespace WoS
+} // namespace TGX

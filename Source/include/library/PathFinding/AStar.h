@@ -7,7 +7,7 @@
 #include "IPathfinding.h"
 #include "Point.h"
 
-namespace WoS
+namespace TGX
 {
 class AStar : public IPathfinding
 {
@@ -27,4 +27,4 @@ private:
 	const int aStar_limit = 100;
 	const int neighbour_limit = 8;
 };
-} // namespace WoS
+} // namespace TGX

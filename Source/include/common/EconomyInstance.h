@@ -2,7 +2,7 @@
 
 #include "Core.h"
 
-namespace WoS
+namespace TGX
 {
 class EconomyInstance
 {
@@ -41,4 +41,4 @@ public:
 		resources[resName] -= threshold;
 	}
 };
-} // namespace WoS
+} // namespace TGX

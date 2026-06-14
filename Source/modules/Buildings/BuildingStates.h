@@ -4,7 +4,7 @@
 #include "Core.h"
 #include "ItemInstance.h"
 
-namespace WoS
+namespace TGX
 {
 class BuildingState : public ItemInstance
 {
@@ -507,4 +507,4 @@ public:
 		return powerUsage;
 	}
 };
-} // namespace WoS
+} // namespace TGX

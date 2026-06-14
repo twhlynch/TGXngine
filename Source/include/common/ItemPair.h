@@ -3,7 +3,7 @@
 #include <utility>
 #include "ItemInstance.h"
 
-namespace WoS
+namespace TGX
 {
 struct ItemPair
 {
@@ -15,4 +15,4 @@ struct ItemPair
 	{
 	}
 };
-} // namespace WoS
+} // namespace TGX
