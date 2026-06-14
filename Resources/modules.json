@@ -11,6 +11,7 @@
 				{"type":"interface", "name":"modules/Interface"},
 				{"type":"triggers", "name":"modules/Triggers"},
 				{"type":"economy", "name":"modules/Economy"},
+				{"type":"ai", "name":"modules/AI"},
 				{"type":"resources", "name":"modules/Resources"}
 			],
 			"required_jsons":

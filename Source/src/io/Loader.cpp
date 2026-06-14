@@ -459,6 +459,43 @@ void Loader::AssignEconomy(json &level)
 	}
 }
 
+void Loader::AssignAI(json &level)
+{
+	Log::Info("Assign AI");
+
+	json &ai = level["ai"];
+
+	if (ai.empty() || !ai.is_array())
+	{
+		return;
+	}
+
+	for (std::size_t i = 0; i < ai.size(); i++)
+	{
+		json &jsonAIItem = ai[i];
+
+		std::string moduleType = jsonAIItem.contains("type") ? jsonAIItem["type"].get<std::string>() : "ai";
+
+		gameAis.push_back(
+			std::make_unique<AI>(
+				(FNPTR_AI_AWAKE)GET_PROC(dlls[moduleType], "Awake"),
+				(FNPTR_AI_START)GET_PROC(dlls[moduleType], "Start"),
+				(FNPTR_AI_UPDATE)GET_PROC(dlls[moduleType], "Update"),
+				(FNPTR_AI_CLEAR)GET_PROC(dlls[moduleType], "Clear"),
+				(FNPTR_AI_DELETE)GET_PROC(dlls[moduleType], "Delete")));
+
+		gameAis.back()->Awake(jsonAIItem["name"]);
+	}
+
+	for (auto &activeAi : gameAis)
+	{
+		if (activeAi)
+		{
+			activeAi->Start();
+		}
+	}
+}
+
 void Loader::AddGameItem(int inUid, json &item)
 {
 	Log::Info("Add Game Item");

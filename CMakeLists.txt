@@ -268,22 +268,19 @@ if(WIN32)
 
     # --- ZLIB DLL Handling ---
     if(NOT ZLIB_FOUND)
+        if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+            # If it built as zlibd.dll, use that name here, but we still output it as z.dll if that's what TGXngine expects
+            set(ZLIB_DLL_SRC "${CMAKE_CURRENT_SOURCE_DIR}/Vendor/zlib/build/Debug/zlibd.dll") 
+        else()
+            set(ZLIB_DLL_SRC "${CMAKE_CURRENT_SOURCE_DIR}/Vendor/zlib/build/Release/zlib.dll")
+        endif()
+
         add_custom_command(
             TARGET TGXngine POST_BUILD
             COMMAND ${CMAKE_COMMAND} -E copy_if_different
-                "${CMAKE_CURRENT_SOURCE_DIR}/Vendor/zlib/build/Release/z.dll"
+                "${ZLIB_DLL_SRC}"
                 "${OUT_BIN_ROOT}/z.dll"
             COMMENT "Copying z.dll to build directory..."
-        )
-    endif()
-
-    if(NOT OPENAL_FOUND AND NOT OpenAL_FOUND)
-        add_custom_command(
-            TARGET TGXngine POST_BUILD
-            COMMAND ${CMAKE_COMMAND} -E copy_if_different
-                "${CMAKE_CURRENT_SOURCE_DIR}/Vendor/SFML/extlibs/bin/x64/openal32.dll"
-                "${OUT_BIN_ROOT}/OpenAL32.dll"
-            COMMENT "Copying OpenAL32.dll to build directory..."
         )
     endif()
 endif()

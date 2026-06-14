@@ -1,6 +1,7 @@
 #pragma once
 
 #include <nlohmann/json.hpp>
+#include "AI.h"
 #include "Asset.h"
 #include "Core.h"
 #include "Economy.h"
@@ -41,6 +42,7 @@ private:
 	Vector<Unique<Interface>> gameInterfaces;
 	Vector<Unique<Triggers>> gameTriggers;
 	Vector<Unique<Economy>> gameEconomies;
+	Vector<Unique<AI>> gameAis;
 #ifdef PLATFORM_WINDOWS
 	Map<String, HINSTANCE> dlls;
 #endif
